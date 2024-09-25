@@ -1,24 +1,33 @@
-# README
+# そざいぽけっと
+## サイト概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### サイトテーマ
+動画制作に使える素材（画像・動画）を共有できるコミュニティサイト
+​
+### テーマを選んだ理由
+動画制作を行う中で、オリジナル素材を集める際に多くの時間を費やしていることに悩んでいました。
+既存の素材サイトでは、独自性がありつつも自分が求める素材を見つけるのが難しく、制作の効率が上がらないと感じています。
+そこで、動画制作者が自分のオリジナル素材を手軽に共有し合える場があれば、クリエイティブな選択肢が増え、より個性的で独創的な作品を作りやすくなると考え、このテーマを選びました。
+​
+### ターゲットユーザ
+動画制作用のオリジナル素材を共有したい人
+動画制作用のオリジナル素材を探している人
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+​
+### 主な利用シーン
+自分の作成した素材を他のクリエイターと共有したい時
+動画制作で使えるオリジナル素材を探している時
+​
+## 設計書
+後ほど作成予定
+​
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+​
+## 使用素材
+著作権を考慮し、架空のデータを扱う予定です。
+なお今後、実在するデータを利用する際には、事前に著作権保持者と契約を結んだ上で利用します。
