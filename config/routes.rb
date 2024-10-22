@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'users/show'
+  resources :posts
+  devise_for :users
+  get 'homes/about'
+  root to: "homes#top"
+  get "about",to: "homes#about"
+  get 'users/:id', to: 'users#show', as: 'user'
 end
