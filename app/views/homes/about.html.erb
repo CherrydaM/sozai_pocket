@@ -1,1 +1,19 @@
-<h1>Aboutページ</h1>
+<h1>そざいぽけっと</h1>
+<p>動画作成に使用できる素材を～（説明文）</p>
+
+<table>
+  <tbody>
+    <% @posts.each_slice(4) do |posts_row| %>
+      <tr>
+        <% posts_row.each do |post| %>
+          <td style="padding: 10px; text-align: center;">
+            <strong>Title:</strong> <%= post.title %><br>
+            <%= image_tag post.image.variant(resize_to_fill: [200, 200]), size: "200x200" if post.image.attached? %><br>
+            <strong>Content:</strong>
+            <p><%= post.content %></p>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

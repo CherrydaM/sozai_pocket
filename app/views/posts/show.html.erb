@@ -5,6 +5,10 @@
   <%= @post.title %>
 </p>
 
+<% if @post.image.attached? %>
+  <%= image_tag @post.image, style: "max-width: 300px;" %>
+<% end %>
+
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
@@ -14,6 +18,8 @@
   <strong>User:</strong>
   <%= @post.user_id %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

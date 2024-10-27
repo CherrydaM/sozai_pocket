@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
-  def top
+  def about
+    @posts = Post.all.includes(:user)
   end
 end

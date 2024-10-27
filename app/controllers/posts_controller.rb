@@ -66,7 +66,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :user_id, :image)
     end
 
     # Check if the current user is the correct owner of the post
