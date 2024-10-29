@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>投稿一覧</h1>
 
 <table>
   <tbody>
@@ -8,15 +8,15 @@
       <tr>
         <% group.each do |post| %>
           <td>
-            <strong>Title: <%= post.title %></strong><br>
+            <strong>タイトル: <%= post.title %></strong><br>
             <%= image_tag post.image.variant(resize_to_fill: [200, 200]), size: "200x200" if post.image.attached? %><br>
-            <strong>Content:</strong>
+            <strong>内容:</strong>
             <p><%= post.content %></p>
-            <strong>User ID:</strong>
+            <strong>ユーザー:</strong>
             <p><%= post.user_id %></p>
-            <%= link_to 'Show', post %><br>
-            <%= link_to 'Edit', edit_post_path(post) %><br>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to '詳細', post %><br>
+            <%= link_to '編集', edit_post_path(post) %><br>
+            <%= link_to '削除', post, method: :delete, data: { confirm: '本当に削除しますか?' } %>
           </td>
         <% end %>
       </tr>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to '新規投稿', new_post_path %>

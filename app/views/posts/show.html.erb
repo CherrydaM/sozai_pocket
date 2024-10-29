@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @post.title %>
 </p>
 
@@ -10,16 +10,16 @@
 <% end %>
 
 <p>
-  <strong>Content:</strong>
+  <strong>内容:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>ユーザー:</strong>
   <%= @post.user_id %>
 </p>
 
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to '戻る', posts_path %>
