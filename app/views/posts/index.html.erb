@@ -2,17 +2,16 @@
 
 <h1>投稿一覧</h1>
 
-<table>
+<table style="border-collapse: collapse;">
   <tbody>
     <% @posts.each_slice(4) do |group| %>
       <tr>
         <% group.each do |post| %>
-          <td style="padding: 10px; text-align: center;">
-            <strong>タイトル:</strong> <%=link_to post.title,post_path(post) %><br>
+          <td style="padding: 10px; text-align: center; border: 1px dashed #ccc;"> 
+            <strong>タイトル:</strong> <%= link_to post.title, post_path(post) %><br>
             <%= image_tag post.image.variant(resize_to_fill: [200, 200]), size: "200x200" if post.image.attached? %><br>
             <strong>内容:</strong>
             <p><%= post.content %></p>
-            <hr style="border-top: 1px dashed #ccc;">
           </td>
         <% end %>
       </tr>
