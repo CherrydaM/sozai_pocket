@@ -3,7 +3,7 @@
 <%= form_with(model: @post, local: true) do |form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %> 件のエラーにより、この投稿は保存できませんでした。</h2>
       <ul>
         <% @post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -13,17 +13,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "タイトル" %>
     <%= form.text_field :title %>
   </div>
   
   <div>
-    <%= form.label :image %>
+    <%= form.label :image, "素材" %>
     <%= form.file_field :image %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :content,"内容"%>
     <%= form.text_area :content %>
   </div>
 

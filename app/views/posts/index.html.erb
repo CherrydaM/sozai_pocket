@@ -4,7 +4,7 @@
 
 <table style="border-collapse: collapse;">
   <tbody>
-    <% @posts.each_slice(4) do |group| %>
+    <% @posts.each_slice(7) do |group| %>
       <tr>
         <% group.each do |post| %>
           <td style="padding: 10px; text-align: center; border: 1px dashed #ccc;"> 
@@ -12,6 +12,7 @@
             <%= image_tag post.image.variant(resize_to_fill: [200, 200]), size: "200x200" if post.image.attached? %><br>
             <strong>内容:</strong>
             <p><%= post.content %></p>
+            <strong>ユーザー:</strong> <%= post.user.name %>
           </td>
         <% end %>
       </tr>
